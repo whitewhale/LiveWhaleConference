@@ -1,0 +1,85 @@
+
+// =========================================================
+//
+//  Social Icons
+// 
+//	Lets editors choose social icons from 
+//  the formats menu in the LiveWhale toolbar 
+//
+//  Install Font Awesome icons if not installed already
+//  https://fontawesome.com/
+// 
+// =========================================================
+
+html {
+	
+	.twitter-link, 
+	.facebook-link,
+	.instagram-link,
+	.youtube-link,
+	.snapchat-link,
+	.spotify-link {
+		color: $red-1;
+		font-weight: 600;
+
+		&::before {
+			font-family: 'Font Awesome 5 Brands';
+			-moz-osx-font-smoothing: grayscale;
+	    -webkit-font-smoothing: antialiased;
+	    display: inline-block;
+	    font-style: normal;
+	    font-variant: normal;
+	    text-rendering: auto;
+	    line-height: 1;
+	    font-weight: 400;
+	    text-decoration: none;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			vertical-align: text-bottom;
+			margin-right: 10px;
+			width: 30px;
+			height: 30px;
+			border-radius: 1px;
+			font-size: 16px;
+			background-color: $red-1;
+			color: $white;
+			transition: all 150ms ease;
+			vertical-align: middle;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+
+			&::before {
+				background-color: darken($red-1, 10%);
+			}
+		}
+	}
+
+
+	.twitter-link::before { 
+		content: '\f099';
+	}
+
+	.facebook-link::before {
+		content: '\f39e';
+	}
+
+	.instagram-link::before {
+		content: '\f16d';
+	}
+
+	.snapchat-link::before {
+		content: '\f2ac';
+	}
+
+	.youtube-link::before {
+		content: '\f167';
+	}
+
+	.spotify-link::before {
+		content: '\f1bc';
+	}
+}

@@ -1,0 +1,54 @@
+// =========================================================
+//
+//  Accessible Text
+//
+//  Use when images contain text or data that is not 
+//  accessbile to screenreaders, eg maps or infographics.
+//
+//  Add descriptive text beneath the image and use
+//  the source code button in the LiveWhale toolbar
+//  to apply the class .accessible-text 
+//
+//  This text only shows when editing the page.
+//
+// =========================================================
+
+.accessible-text {
+
+  // hide the text when not editing the page - must be default state to avoid FOUC
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+
+  .livewhale.lw_editor_on & { // when editing the page
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: unset;
+    margin: 50px 0 40px;
+    color: $red-1;
+    border: 2px solid $red-1;
+    padding: 20px 26px;
+    font-size: 22px;
+    line-height: 1.6;
+
+
+    &::before { // content label
+      content:'Accessible text for screenreaders only';
+      display: block;
+      position: absolute;
+      left: 10px;
+      bottom: calc(100% + 2px); // space for border
+      padding: 5px 10px;
+      background-color: $black;
+      color: $white;
+      font-size: 13px;
+    }
+  }
+}
