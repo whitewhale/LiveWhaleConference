@@ -1,0 +1,27 @@
+// =========================================================
+//
+//  Focus State
+//
+//  Apply focus state for keyboard users and hide
+//  focus outline when link is clicked.
+//
+// =========================================================
+
+
+a {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {  // mouse hover state
+    color: red;
+    text-decoration: underline;
+  }
+
+  &:focus:not(:hover) { // focus state for keyboard accessibility
+    outline: 2px dotted dodgerblue;
+    outline: auto 2px dodgerblue; // auto required otherwise outline sometimes gets hidden
+    outline-color: dodgerblue;
+  }
+}

@@ -19,7 +19,7 @@ html {
 	.youtube-link,
 	.snapchat-link,
 	.spotify-link {
-		color: $red-1;
+		color: red;
 		font-weight: 600;
 
 		&::before {
@@ -42,8 +42,8 @@ html {
 			height: 30px;
 			border-radius: 1px;
 			font-size: 16px;
-			background-color: $red-1;
-			color: $white;
+			background-color: red;
+			color: white;
 			transition: all 150ms ease;
 			vertical-align: middle;
 		}
@@ -53,7 +53,7 @@ html {
 			text-decoration: underline;
 
 			&::before {
-				background-color: darken($red-1, 10%);
+				background-color: darken(red, 10%);
 			}
 		}
 	}

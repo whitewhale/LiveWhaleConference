@@ -1,0 +1,79 @@
+// =========================================================
+//
+//  Widget Headers
+//
+//  Lets editors choose the widget heading level and 
+//  apply the heading style they desire.
+//
+//  The class .has-large-header is applied to widgets via 
+//  the widget editor or using an inline widget arg
+//  <arg id="class">large-header</arg>
+// 
+//  The class .large-header is used on header elements 
+//  <h2 class="large-header">
+//
+// =========================================================
+
+.large-header,  
+.has-large-header > h2,
+.has-large-header > h3,
+.has-large-header > h4,
+.has-large-header > h5 { 
+  display: block;
+  margin-bottom: 37px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid gray;
+  color: dimgray;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.214;
+
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: red; 
+      text-decoration: none;
+    }
+  }
+}
+
+
+.small-header, 
+.has-small-header > h2,
+.has-small-header > h3, 
+.has-small-header > h4,
+.has-small-header > h5 {
+  display: inline; // required if title has two lines
+  padding-bottom: 0;
+  border-bottom: 4px solid lightgray;
+  color: $gray-4;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.875;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+
+  &::after { // prettier underline supports title with two lines
+    content:'';
+    display: table;
+    clear: both;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: red; 
+      text-decoration: none;
+    }
+  }
+}
