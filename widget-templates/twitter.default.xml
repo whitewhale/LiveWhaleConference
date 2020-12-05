@@ -1,0 +1,20 @@
+<widget type="template">
+	<title>Default</title>
+	<args>
+		<arg id="max">1</arg>
+		<arg id="paginate">false</arg>
+		<arg id="clean_markup">true</arg>
+		<arg id="format">
+
+			<div class="media-box">
+				{<a class="media-box-image" href="{link}"  target="_blank" style="background-image: url(|picture_src|)" aria-hidden="true"></a>}
+				<div class="media-box-bottom">
+					<div class="media-box-title"><span class="media-box-avatar">{avatar}</span> {username}</div>
+					<div class="media-box-caption">{tweet}</div>
+				</div>
+				<a class="media-box-icon" href="https://twitter.com/myedu" target="_blank" aria-label="Go to Twitter" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+			</div>
+
+		</arg>
+	</args>
+</widget>

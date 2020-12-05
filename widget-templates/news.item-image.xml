@@ -1,0 +1,21 @@
+<widget type="template">
+    <title>Single News Story (with optional image)</title>
+    <args>
+			<arg id="max">1</arg>
+			<arg id="paginate">false</arg>
+      <arg id="clean_markup">true</arg>
+      <arg id="exclude_duplicates">true</arg>
+      <arg id="format">
+
+				<li class="news-item has-image-right">
+					<div class="news-item-text">
+						{<span class="tiny-header">|custom_sig|</span>}
+						<h4 class="title">{headline}</h4>
+						{<div class="summary">|summary|</div>}
+					</div>
+					{image}
+				</li>
+
+      </arg>
+    </args>
+</widget>

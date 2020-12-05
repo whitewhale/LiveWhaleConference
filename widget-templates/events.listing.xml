@@ -1,0 +1,58 @@
+<widget type="template">
+    <title>Events List</title>
+    <args>
+    	<arg id="hide_date_headers">true</arg>
+      <arg id="clean_markup">true</arg>
+      <arg id="format_widget_style">results</arg>
+      <arg id="date_format"><span class="date-box"><span class="month">%M</span><span class="date">%j</span></span></arg>
+      <arg id="format"> 
+
+				<field content="true">
+				  <if var="image"/>
+				    <content>
+							
+							<!-- LW: apply styling class to events with images -->
+							<li class="event-item has-image">
+								<div class="event-item-left">
+									{date}
+									{image}
+								</div>
+								<div class="event-item-text">
+									<h4 class="title">{title}</h4>
+									<div class="meta">
+										{time}{<span class="location">|location|</span>}
+									</div>
+								</div>
+							</li>
+
+				    </content>
+				  <else content="true">
+				    <content>
+							
+							<!-- LW: events without images -->
+							<li class="event-item">
+								<div class="event-item-left">
+									{date}
+								</div>
+								<div class="event-item-text">
+									<h4 class="title">{title}</h4>
+									<div class="meta">
+										{time}{<span class="location">|location|</span>}
+									</div>
+								</div>
+							</li>
+							
+				    </content>
+				  </else>
+				</field>
+			
+      </arg>
+      <arg id="format_widget">
+				
+			  <ul class="events-list">
+			    {widget}
+			  </ul>
+
+      </arg>
+    </args>
+</widget>

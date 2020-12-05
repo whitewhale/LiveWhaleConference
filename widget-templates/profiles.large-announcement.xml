@@ -1,0 +1,30 @@
+<widget type="template">
+  <title>Large Announcement</title>
+  <args>
+    <arg id="thumb_width">338</arg>
+		<arg id="thumb_height">338</arg>
+		<arg id="clean_markup">true</arg>
+		<arg id="paginate">false</arg>
+		<arg id="format_widget_style">results</arg>
+    <arg id="format">
+
+			<div class="large-announcement-inner container">
+				{<div class="large-announcement-image">|image|</div>}
+				<div class="large-announcement-text">
+					<h4 class="large-announcement-title">{title}</h4>
+					{<div class="large-announcement-summary">|profiles_82|</div>}
+					{<a href="|profiles_83|" class="large-announcement-link">Read More</div>}
+				</div>
+			</div>
+
+    </arg>
+    <arg id="format_widget">
+
+			<section class="large-announcement">
+			  {widget}
+			</section>
+
+    </arg>
+
+  </args>
+</widget>
