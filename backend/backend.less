@@ -1,0 +1,60 @@
+// LiveWhale Back-End UI Styling
+
+
+// Hide Pages and Blogs tab from non-admin users
+body:not(.admin-user) {
+  #tab_pages,
+  #tab_blogs {
+    display: none;
+  }
+}
+
+
+// News Story editor: hide location field from non-admins
+#news_edit:not(.admin-user) .fields_location { 
+  display: none;
+}
+
+// LiveWhale gallery widgets: hide core livewhale galleries, keep all others
+#widgets_edit .arg_type select[name="type"] {
+
+  option[value="simple"],
+  option[value="mini"] { 
+    display: none;
+  }
+}
+
+
+// Featured Links blurbs editor: hide unnessecary fields
+#blurbs_edit.blurbs_type_14 .main {
+  .fields_flags,
+  .fields_date,
+  .fields_body, 
+  .fields_link,
+  .fields_location,
+  .fields_username,
+  .fields_related_content,
+  #sharing, {
+    display: none;
+  }
+}
+
+
+// FAQ blurbs editor: add instructional text
+#blurbs_edit.blurbs_type_8 .main {
+
+  > h1::after {
+    display: block;
+    content:'Include the question in the title';
+    font-size: 16px;
+    font-weight: normal;
+    color: #777;
+    margin-top: 3px;
+  }
+
+  .fields_body .header::after {
+    display: inline;
+    content:' (include the answer here)';
+  } 
+}
+
